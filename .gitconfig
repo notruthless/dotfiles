@@ -1,0 +1,37 @@
+[user]
+	name = Ruth Helfinstein
+	email = ruth.helfinstein@onlive.com
+[branch]
+  autosetuprebase = always
+[core]
+  editor = vim
+	excludesfile = /Users/ruth.helfinstein/.gitignore
+	autocrlf = false
+	filemode = false
+[color]
+	ui = true
+  status = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+[color "status"]
+  added = green bold
+  changed = cyan bold
+  untracked = yellow bold
+[color "branch"]
+  current = cyan bold
+  local = yellow
+  remote = green
+[merge]
+  tool = vimdiff
+[push]
+  default = simple
+[alias]
+   st = status
+   co = checkout
+   br = branch
+   ci = commit
+   unstage = reset HEAD --
+   last = log -1 HEAD
+   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
