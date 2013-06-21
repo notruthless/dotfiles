@@ -1,4 +1,3 @@
-
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
@@ -35,6 +34,7 @@ case `uname` in
   ;;
   'CYG'*|'Linux'*)
     echo 'Cygwin'
+    export PATH=$PATH:/d/Cygwin/bin
     echo -ne '\e]4;4;#00FFFF\a' # change terminal blue
     export RUBYGITHOOKS_SHEBANG='#!/usr/bin/env /home/ruth.helfinstein/.rvm/bin/githooks_ruby'
    # [[ -f "$HOME/.bash/mac" ]] && source "$HOME/.bash/linux"
@@ -46,14 +46,10 @@ case `uname` in
 esac
 
 
-export JIRA_USER=`id -un`
-export JIRA_PASSWORD=`cat ~/.secrets/jira_pwd`
-
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-#export PATH=$PATH:/d/Cygwin/bin
 export PATH=/usr/local/bin:$PATH
-alias platform='cd ~/repositories/platform_services/'
+
 
 
 
