@@ -32,7 +32,7 @@ case `uname` in
 
    # [[ -f "$HOME/.bash/windows" ]] && source "$HOME/.bash/windows"
   ;;
-  'CYG'*|'Linux'*)
+  'CYG'*)
     echo 'Cygwin'
     export PATH=$PATH:/d/Cygwin/bin
     echo -ne '\e]4;4;#00FFFF\a' # change terminal blue
