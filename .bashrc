@@ -24,7 +24,7 @@ case `uname` in
     # [[ -f "$HOME/.bash/mac" ]] && source "$HOME/.bash/mac"
   ;;
   'MINGW'*)
-    echo 'Windows'
+    echo 'Loading Windows preferences'
     echo -ne '\e]4;4;#00FFFF\a' # change terminal blue
     export RUBYGITHOOKS_SHEBANG='#!'`which ruby`  # no rvm
     alias irb='irb --noreadline' # so backspace works
@@ -33,14 +33,14 @@ case `uname` in
    # [[ -f "$HOME/.bash/windows" ]] && source "$HOME/.bash/windows"
   ;;
   'CYG'*)
-    echo 'Cygwin'
+    echo 'Loading Cygwin settings'
     export PATH=$PATH:/d/Cygwin/bin
     echo -ne '\e]4;4;#00FFFF\a' # change terminal blue
     export RUBYGITHOOKS_SHEBANG='#!/usr/bin/env /home/ruth.helfinstein/.rvm/bin/githooks_ruby'
    # [[ -f "$HOME/.bash/mac" ]] && source "$HOME/.bash/linux"
   ;;
   'Linux'*)
-    echo 'Linux'
+    echo 'Loading Linux settings'
     export PATH=$PATH:$HOME/bin
   ;;
 esac
@@ -49,6 +49,7 @@ esac
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=/usr/local/bin:$PATH
+
 
 
 
