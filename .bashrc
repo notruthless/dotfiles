@@ -20,7 +20,7 @@
 
 case `uname` in 
   'Dar'*)
-    echo "Loading Mac specific stuff."
+    echo "Loading Mac settings."
     # [[ -f "$HOME/.bash/mac" ]] && source "$HOME/.bash/mac"
   ;;
   'MINGW'*)
