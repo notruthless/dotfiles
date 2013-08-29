@@ -50,10 +50,12 @@ command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 set background=dark
 
 " smart indenting and tabs
-" set smartindent
+set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+set ignorecase
 
 " set terminal window title to the name of the file
 set title

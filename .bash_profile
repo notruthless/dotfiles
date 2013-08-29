@@ -18,9 +18,9 @@ function parse_git_branch {
   echo "("${ref#refs/heads/}")"
 }
 
-PS1_SET_TITLE='\[\e]0;\u@\h:\w\a\]'
 PS1="\w \$(parse_git_branch)\$ "
 export PS1
 
+export PS1_SET_TITLE='\[\e]0;\u@\h:\w\a\]'
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx

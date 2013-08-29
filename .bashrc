@@ -13,7 +13,6 @@
 # alias vdir='ls --color=auto --format=long'
  alias ll='ls -l'                              # long list
  alias la='ls -A'                              # all but . and ..
- alias l='ls -CF'                              #
  alias ls='ls -hF'
 
  alias chrome="open -a 'Google Chrome'"
@@ -50,7 +49,7 @@ esac
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=/usr/local/bin:$PATH
 
-
-
-
+# work specific
+export PATH=$PATH:$HOME/repositories/svn/ops/trunk/scripts
+export RUBYLIB=$HOME/svn-ops/trunk/rubylib/
 
