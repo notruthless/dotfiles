@@ -4,6 +4,13 @@
 # Don't put duplicate lines in the history.
  export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 
+# Eternal bash history.
+# ---------------------
+# Undocumented feature which sets the size to "unlimited".
+# http://stackoverflow.com/questions/9457233/unlimited-bash-history
+export HISTFILESIZE=
+export HISTSIZE=
+
  alias grep='grep --color'                     # show differences in colour
  alias egrep='egrep --color=auto'              # show differences in colour
  alias fgrep='fgrep --color=auto'              # show differences in colour
