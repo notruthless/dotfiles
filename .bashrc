@@ -1,15 +1,16 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
-# Don't put duplicate lines in the history.
- export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
-
 # Eternal bash history.
 # ---------------------
 # Undocumented feature which sets the size to "unlimited".
 # http://stackoverflow.com/questions/9457233/unlimited-bash-history
 export HISTFILESIZE=
 export HISTSIZE=
+
+# Don't put duplicate lines in the history.
+ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+# export HISTCONTROL=ignoredups:erasedups
 
  alias grep='grep --color'                     # show differences in colour
  alias egrep='egrep --color=auto'              # show differences in colour
@@ -52,11 +53,12 @@ case `uname` in
 esac
 
 
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=/usr/local/bin:$PATH
 
 # work specific
-export PATH=$PATH:$HOME/repositories/svn/ops/trunk/scripts
 export RUBYLIB=$HOME/svn-ops/trunk/rubylib/
-
+export PATH=$PATH:$HOME/svn-ops/trunk/scripts
+export PATH=$PATH:$HOME/ol_scripts
+export JIRA_USER=`id -un`
+export JIRA_PASSWORD=`cat ~/.secrets/jira_pwd`
