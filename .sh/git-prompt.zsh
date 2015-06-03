@@ -1,4 +1,4 @@
-## Find my full .zshrc at <github.com/mislav/dotfiles/blob/master/zshrc>.
+## based on https://gist.github.com/mislav/1712320
 
 # setup
 
