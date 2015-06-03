@@ -14,8 +14,8 @@
 # export HISTFILESIZE=
 # export HISTSIZE=
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 
 # Don't put duplicate lines in the history. (doesn't work in zsh)
 # export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
@@ -39,7 +39,7 @@ SAVEHIST=10000
 # Download from https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 # [[ -f "$HOME/.sh/git-completion.bash" ]] && source "$HOME/.sh/git-completion.bash"
 # [[ -f "$HOME/.sh/git-override.bash" ]] && source "$HOME/.sh/git-override.bash"
-[[ -f "$HOME/.sh/git-prompt.zsh" ]] && echo "prompt" && source "$HOME/.sh/git-prompt.zsh"
+[[ -f "$HOME/.sh/git-prompt.zsh" ]] && source "$HOME/.sh/git-prompt.zsh"
 
 
 export CLICOLOR=1
