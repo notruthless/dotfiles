@@ -1,11 +1,11 @@
 [user]
 	name = Ruth Helfinstein
-	email = ruth.helfinstein@onlive.com
+	email = github@helfinstein.com
 [branch]
   autosetuprebase = always
 [core]
   editor = vim
-	excludesfile = /Users/ruth.helfinstein/.gitignore
+	excludesfile = /Users/ruth/.gitignore
 	autocrlf = false
 	filemode = false
 [color]

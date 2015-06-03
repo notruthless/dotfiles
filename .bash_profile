@@ -10,8 +10,8 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Download from https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-[[ -f "$HOME/.bash/git-completion.bash" ]] && source "$HOME/.bash/git-completion.bash"
-[[ -f "$HOME/.bash/git-override.bash" ]] && source "$HOME/.bash/git-override.bash"
+[[ -f "$HOME/.sh/git-completion.bash" ]] && source "$HOME/.sh/git-completion.bash"
+[[ -f "$HOME/.sh/git-override.bash" ]] && source "$HOME/.sh/git-override.bash"
 
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return

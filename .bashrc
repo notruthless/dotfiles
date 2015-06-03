@@ -28,7 +28,7 @@ export HISTSIZE=
 case `uname` in 
   'Dar'*)
     echo "Loading Mac settings."
-    # [[ -f "$HOME/.bash/mac" ]] && source "$HOME/.bash/mac"
+    # [[ -f "$HOME/.sh/mac" ]] && source "$HOME/.sh/mac"
   ;;
   'MINGW'*)
     echo 'Loading Windows preferences'
@@ -37,14 +37,14 @@ case `uname` in
     alias irb='irb --noreadline' # so backspace works
     export PATH=$PATH:/utils/console
 
-   # [[ -f "$HOME/.bash/windows" ]] && source "$HOME/.bash/windows"
+   # [[ -f "$HOME/.sh/windows" ]] && source "$HOME/.sh/windows"
   ;;
   'CYG'*)
     echo 'Loading Cygwin settings'
     export PATH=$PATH:/d/Cygwin/bin
     echo -ne '\e]4;4;#00FFFF\a' # change terminal blue
     export RUBYGITHOOKS_SHEBANG='#!/usr/bin/env /home/ruth.helfinstein/.rvm/bin/githooks_ruby'
-   # [[ -f "$HOME/.bash/mac" ]] && source "$HOME/.bash/linux"
+   # [[ -f "$HOME/.sh/mac" ]] && source "$HOME/.sh/linux"
   ;;
   'Linux'*)
     echo 'Loading Linux settings'
@@ -56,9 +56,3 @@ esac
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=/usr/local/bin:$PATH
 
-# work specific
-export RUBYLIB=$HOME/svn-ops/trunk/rubylib/
-export PATH=$PATH:$HOME/svn-ops/trunk/scripts
-export PATH=$PATH:$HOME/ol_scripts
-export JIRA_USER=`id -un`
-export JIRA_PASSWORD=`cat ~/.secrets/jira_pwd`

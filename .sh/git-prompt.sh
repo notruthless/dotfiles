@@ -399,3 +399,5 @@ __git_ps1 ()
 		fi
 	fi
 }
+
+echo "git prompt"
