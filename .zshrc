@@ -1,8 +1,20 @@
-#export PATH="$HOME/.bin:$PATH"
+
+ # Set Apple Terminal.app resume directory
+ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
+   function chpwd {
+     local SEARCH=' '
+     local REPLACE='%20'
+     local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+     printf '\e]7;%s\a' "$PWD_URL"
+   }
+
+   chpwd
+ }
 
  # recommended by brew doctor
  export PATH="/usr/local/bin:$PATH"
- eval "$(rbenv init - --no-rehash zsh)"
+ # not using rbenv right now
+ # eval "$(rbenv init - --no-rehash zsh)"
 
  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -30,6 +42,7 @@ SAVEHIST=100000
  alias ll='ls -l'                              # long list
  alias la='ls -A'                              # all but . and ..
  alias ls='ls -hF'
+ alias history='history 1'
 
  alias chrome="open -a 'Google Chrome'"
 
