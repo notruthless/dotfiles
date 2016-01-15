@@ -46,11 +46,7 @@ SAVEHIST=100000
 
  alias chrome="open -a 'Google Chrome'"
  
- alias gb="git for-each-ref --sort=committerdate refs/heads/
-  --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) |
-  %(authorname) |
-  (%(color:green)%(committerdate:relative)%(color:reset))|
-  %(contents:subject) ' | column -t -s '|'"
+ alias gb="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) | %(authorname) | (%(color:green)%(committerdate:relative)%(color:reset))| %(contents:subject) ' | column -t -s '|'"
 
 
 # from .bash_profile
