@@ -45,6 +45,13 @@ SAVEHIST=100000
  alias history='history 1'
 
  alias chrome="open -a 'Google Chrome'"
+ 
+ alias gb="git for-each-ref --sort=committerdate refs/heads/
+  --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) |
+  %(authorname) |
+  (%(color:green)%(committerdate:relative)%(color:reset))|
+  %(contents:subject) ' | column -t -s '|'"
+
 
 # from .bash_profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
